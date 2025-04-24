@@ -40,3 +40,18 @@ while (user_number != random_number) and attempts < 5:
 
     if attempts == 5 and user_number != random_number:
         print(f"\nGame over! The correct number was {random_number}.")
+
+    if (attempts == 5 and user_number != random_number) or user_number == random_number:
+
+        play_again = input("\nDo you want to play again? (y/n): ").strip().lower()
+        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        
+        if play_again == "y":
+            user_number = None
+            attempts = 0
+            random_number = random.randint(1, 20)
+            print("\nA new random number has been generated.")
+            print(f"{random_number}")  # For testing purposes
+            print("Good luck!")
+        else:
+            print("\nThanks for playing!")
