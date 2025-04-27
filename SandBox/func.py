@@ -11,7 +11,7 @@ def greet(list):
 name1 = ["John", "Jane", "Doe"]
 name2 = ["Alice", "Bob", "Charlie"]
 
-print("\nGreeting from name1:")
+print("\nGreeting from name1:") 
 greet(name1)
 
 print("\nGreeting from name2:")
