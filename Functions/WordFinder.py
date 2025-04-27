@@ -12,8 +12,7 @@ def longest_word(text):
             length = len(word)
             longest_word = word
 
-    word_tuple = (longest_word, length)
-    return word_tuple
+    return (longest_word, length)
 
 
 print("Longest word in the string is: ", longest_word(str)[0])
