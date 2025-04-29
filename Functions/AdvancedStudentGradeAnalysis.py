@@ -33,3 +33,4 @@ print(f"\n{average}")
 passed = list(filter(lambda student: student[1] > 50, average ))
 
 print(f"{passed[0][1]}")
+fgjfjffjfg
