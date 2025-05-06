@@ -26,6 +26,7 @@ for student in data["students"]:
         student["status"] = "Winner"
         break
 
+# Adding a new student to the JSON file
 data["students"].append(
     {
         "id": id + 1,
@@ -35,7 +36,9 @@ data["students"].append(
     }
 )
 
+# Updating the JSON file with the new student and status changes
 with open("students.json", "w") as file:
     json.dump(data, file, indent=4)
 
+# Printing the updated JSON data
 print(f"\n{data['students']}")
