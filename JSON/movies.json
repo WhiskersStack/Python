@@ -9,6 +9,106 @@
                 "Sci-Fi",
                 "Thriller"
             ]
+        },
+        {
+            "id": 2,
+            "title": "The Godfather",
+            "director": "Francis Ford Coppola",
+            "rating": 9.2,
+            "genres": [
+                "Crime",
+                "Drama"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "The Dark Knight",
+            "director": "Christopher Nolan",
+            "rating": 9,
+            "genres": [
+                "Action",
+                "Crime"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Pulp Fiction",
+            "director": "Quentin Tarantino",
+            "rating": 8.9,
+            "genres": [
+                "Crime",
+                "Drama"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "The Shawshank Redemption",
+            "director": "Frank Darabont",
+            "rating": 9.3,
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "The Matrix",
+            "director": "Lana Wachowski, Lilly Wachowski",
+            "rating": 8.7,
+            "genres": [
+                "Sci-Fi",
+                "Action"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Forrest Gump",
+            "director": "Robert Zemeckis",
+            "rating": 8.8,
+            "genres": [
+                "Drama",
+                "Romance"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Fight Club",
+            "director": "David Fincher",
+            "rating": 8.8,
+            "genres": [
+                "Drama",
+                "Thriller"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "The Lord of the Rings: The Return of the King",
+            "director": "Peter Jackson",
+            "rating": 9,
+            "genres": [
+                "Fantasy",
+                "Adventure"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Interstellar",
+            "director": "Christopher Nolan",
+            "rating": 8.6,
+            "genres": [
+                "Sci-Fi",
+                "Adventure"
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Shrek",
+            "director": "Andrew Adamson",
+            "rating": 7.9,
+            "genres": [
+                "Animation",
+                "Adventure",
+                "Comedy"
+            ]
         }
     ]
 }
