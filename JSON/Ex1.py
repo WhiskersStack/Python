@@ -32,9 +32,12 @@ if not book_found:
             "id": id + 1,
             "title": "The Great Gatsby",
             "author": "F. Scott Fitzgerald",
-            "ratings": [4, 5, 3, 4, 5],
+            "ratings": [4, 5, 3],
         }
     )
     print(f"\nAdded the book : The Great Gatsby\n")
 
 print(data)
+
+with open("books.json", "w") as file:
+    json.dump(data, file, indent=4)

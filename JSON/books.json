@@ -19,6 +19,16 @@
                 5,
                 3
             ]
+        },
+        {
+            "id": 3,
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "ratings": [
+                4,
+                5,
+                3
+            ]
         }
     ]
 }
