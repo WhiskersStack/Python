@@ -7,7 +7,8 @@
                 8,
                 7,
                 9
-            ]
+            ],
+            "status": "participant"
         },
         {
             "id": 2,
@@ -16,7 +17,18 @@
                 9,
                 8,
                 10
-            ]
+            ],
+            "status": "Winner"
+        },
+        {
+            "id": 3,
+            "name": "John Cena",
+            "scores": [
+                4,
+                5,
+                3
+            ],
+            "status": "participant"
         }
     ]
 }
