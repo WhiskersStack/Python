@@ -104,3 +104,20 @@ def add_stock():
         json.dump(data, file, indent=4)
 
 add_stock()
+
+print("\n****************************************\n")
+print("Updating banana(id:2) stock... :")
+
+def update_stock(id, new_stock):
+    for stock in data:
+        if stock["id"] == id and new_stock > 0:
+            stock['stock'] = new_stock
+            print("\nStock updated successful!\n")
+            with open("stock.json", "w") as file:
+                json.dump(data, file, indent=4)
+            return
+        
+    print("\nError updating stock...\n")
+
+
+update_stock(2, 33)

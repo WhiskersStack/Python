@@ -11,7 +11,7 @@
         "name": "Banana",
         "category": "Fruit",
         "price": 0.3,
-        "stock": 120
+        "stock": 33
     },
     {
         "id": 3,
