@@ -1,12 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Apple Juice",
-        "category": "Beverage",
-        "price": 2.5,
-        "stock": 50
-    },
-    {
         "id": 2,
         "name": "Banana",
         "category": "Fruit",
@@ -18,7 +11,7 @@
         "name": "Whole Wheat Bread",
         "category": "Bakery",
         "price": 1.8,
-        "stock": 30
+        "stock": 110
     },
     {
         "id": 4,
@@ -61,19 +54,5 @@
         "category": "Dairy",
         "price": 0.9,
         "stock": 75
-    },
-    {
-        "id": 10,
-        "name": "Orange Juice",
-        "category": "Beverage",
-        "price": 2.8,
-        "stock": 45
-    },
-    {
-        "id": 44,
-        "name": "protein",
-        "category": "gym",
-        "price": 4.0,
-        "stock": 3
     }
 ]

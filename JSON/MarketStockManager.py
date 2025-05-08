@@ -100,24 +100,54 @@ def add_stock():
         return
 
     print(f"\n~~~ The {name} added to the database JSON file! ~~~\n")
-    with open("stock.json", "w") as file:
-        json.dump(data, file, indent=4)
+    #with open("stock.json", "w") as file:
+        #json.dump(data, file, indent=4)
 
-add_stock()
+
+# add_stock()
 
 print("\n****************************************\n")
 print("Updating banana(id:2) stock... :")
 
+
 def update_stock(id, new_stock):
     for stock in data:
         if stock["id"] == id and new_stock > 0:
-            stock['stock'] = new_stock
+            stock["stock"] = new_stock
             print("\nStock updated successful!\n")
-            with open("stock.json", "w") as file:
-                json.dump(data, file, indent=4)
+            #with open("stock.json", "w") as file:
+                #json.dump(data, file, indent=4)
             return
-        
+
     print("\nError updating stock...\n")
 
 
 update_stock(2, 33)
+
+
+print("\n****************************************\n")
+print("Increasing Bakery stock by 10... :")
+def restock(category, num):
+    for stock in data:
+        if stock["category"].lower() == category.lower():
+            stock["stock"] += num
+
+
+restock("Bakery", 10)
+
+
+print("\n****************************************\n")
+del_category = input("Enter The category You want to delete : ")
+i = 0
+deleted = False
+for stock in data:
+    if stock["category"].lower() == del_category.lower():
+        print(f"\n{stock['name']} deleted successful!")
+        del data[i]
+    i += 1
+
+if not False:
+    print("\nStock not found...\n")
+
+with open("stock.json", "w") as file:
+    json.dump(data, file, indent=4)
