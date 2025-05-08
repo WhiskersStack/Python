@@ -5,12 +5,15 @@ print("\n~~~ Market Stock Manager ~~~")
 with open("stock.json", "r") as file:
     data = json.load(file)
 
-print("\nPriting the stocks in the database :")
-
+print("\nPrinting the stocks in the database :")
+all_categories = []
 i = 1
 for stock in data:
     print(f"\n{i}. {stock['name']} - {stock['stock']} pcs")
+    all_categories.append(stock['category'])
     i += 1
+
+unique_categories = list(set(all_categories))
 
 i = 1
 print("\nStocks with more than 50 pcs :")
@@ -149,5 +152,27 @@ for stock in data:
 if not False:
     print("\nStock not found...\n")
 
-with open("stock.json", "w") as file:
-    json.dump(data, file, indent=4)
+stock_report = {}
+
+for cat in unique_categories:
+    stock_report[cat] = 0
+
+print("\n****************************************\n")
+print("Generating stock report...")
+def report():
+    for stock in data:
+        stock_report[stock['category']] += 1
+
+    #print(stock_report)
+    print("\nFull stock report :\n")
+    for count in stock_report:
+        print(count, stock_report[count])
+
+report()
+
+
+
+# print(unique_categories)
+
+# with open("stock.json", "w") as file:
+#    json.dump(data, file, indent=4)
