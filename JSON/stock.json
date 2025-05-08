@@ -68,5 +68,12 @@
         "category": "Beverage",
         "price": 2.8,
         "stock": 45
+    },
+    {
+        "id": 44,
+        "name": "protein",
+        "category": "gym",
+        "price": 4.0,
+        "stock": 3
     }
 ]

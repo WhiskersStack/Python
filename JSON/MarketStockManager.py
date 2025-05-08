@@ -12,7 +12,7 @@ for stock in data:
     print(f"\n{i}. {stock['name']} - {stock['stock']} pcs")
     i += 1
 
-i= 1
+i = 1
 print("\nStocks with more than 50 pcs :")
 for stock in data:
     if stock["stock"] > 50:
@@ -48,6 +48,7 @@ for stock in data:
         print(f"\n{i}. {stock['name']}")
         i += 1
 
+
 def find_product_by_name(name):
     stock_name = name.lower()
     for stock in data:
@@ -55,8 +56,51 @@ def find_product_by_name(name):
             return stock
     return None
 
+
 print("\n****************************************\n")
 print("Searching for an apple... :")
 print(find_product_by_name("apple"))
 print("\nSearching for a banana... :")
 print(find_product_by_name("banana"))
+
+
+def is_unique_id(stock_id):
+    for stock in data:
+        if stock["id"] == stock_id:
+            return False
+    return True
+
+
+print("\n****************************************\n")
+print("Checking if the id 1 is unique... :")
+print(is_unique_id(1))
+print("\nChecking if the id 11 is unique... :")
+print(is_unique_id(11))
+
+
+def add_stock():
+    id = int(input("\nEnter the id of the stock : "))
+    name = input("\nEnter the name of the stock : ")
+    category = input("\nEnter the category of the stock : ")
+    price = float(input("\nEnter the price of the stock : "))
+    stock = int(input("\nEnter the stock of the stock : "))
+
+    if is_unique_id(id) and price > 0 and stock > 0:
+        data.append(
+            {
+                "id": id,
+                "name": name,
+                "category": category,
+                "price": price,
+                "stock": stock,
+            }
+        )
+    else:
+        print("\n~~~ The stock already exists or the price/stock is invalid! ~~~\n")
+        return
+
+    print(f"\n~~~ The {name} added to the database JSON file! ~~~\n")
+    with open("stock.json", "w") as file:
+        json.dump(data, file, indent=4)
+
+add_stock()
