@@ -1,8 +1,11 @@
 import requests
+import json
+import metadata
 
+pokemon_id = '1'  # Bulbasaur
+url = metadata.BASE_URL + metadata.ENDPOINTS["pokemon"] + pokemon_id
 
-def get_basic_pokemon_info(pokemon_id_or_name):
-    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_id_or_name}/"
+def get_basic_pokemon_info():
     response = requests.get(url)
 
     if response.status_code != 200:
@@ -18,11 +21,6 @@ def get_basic_pokemon_info(pokemon_id_or_name):
         "height": data["height"],
         "weight": data["weight"],
         "abilities": [a["ability"]["name"] for a in data["abilities"]],
-        "forms": [f["name"] for f in data["forms"]],
-        "game_indices": [
-            {"game_index": gi["game_index"], "version": gi["version"]["name"]}
-            for gi in data["game_indices"]
-        ],
     }
 
     print("\n📋 Basic Pokémon Info:")
@@ -30,5 +28,5 @@ def get_basic_pokemon_info(pokemon_id_or_name):
         print(f"{key}: {value}")
 
 
-# Example usage
-get_basic_pokemon_info("clefairy")  # or use "1" for Bulbasaur
+
+get_basic_pokemon_info()
