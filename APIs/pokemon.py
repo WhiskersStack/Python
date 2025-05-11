@@ -3,12 +3,14 @@ import json
 import metadata
 import random
 
-random_num = random.randint(1, 1000)
+print("\n*** Welcome to the Pokémon API ***\n")
 
-pokemon_id = '1'  # Bulbasaur
-url = metadata.BASE_URL + metadata.ENDPOINTS["pokemon"] # + pokemon_id
+random_num = str(random.randint(1, 1000))
 
-def get_basic_pokemon_info():
+
+def get_basic_pokemon_info(pokemon_id):
+
+    url = metadata.BASE_URL + metadata.ENDPOINTS["pokemon"] + pokemon_id
     response = requests.get(url)
 
     if response.status_code != 200:
@@ -30,18 +32,27 @@ def get_basic_pokemon_info():
     # for key, value in basic_info.items():
     #     print(f"{key}: {value}")
 
-
     # print(data['results'])
-    
-    i = 1
-    for pokemon in data['results']:
-        print(f"{i}. {pokemon['name']}")
-        i += 1
+
+    # i = 1
+    # for pokemon in data['results']:
+    #     print(f"{i}. {pokemon['name']}")
+    #     i += 1
+
+    if pokemon_id != "":
+        for key in data.keys():
+            if key == "name":
+                print(f"{key} - {data[key]}, {data['id']}")
+    else:
+        i = 1
+        for pokemon in data["results"]:
+            print(f"{i}. {pokemon['name']}")
+            i += 1
 
 
-    # for key in data.keys():
-    #     if key == 'name':
-    #         print(f"{key}")
-    
+is_draw = input("Do you want to draw a Pokémon? (y/n): ").strip().lower()
 
-get_basic_pokemon_info()
+if is_draw == "y":
+    get_basic_pokemon_info(random_num)
+else:
+    get_basic_pokemon_info("")
