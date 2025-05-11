@@ -28,7 +28,7 @@ def get_basic_pokemon_info(pokemon_id):
     #     "abilities": [a["ability"]["name"] for a in data["abilities"]],
     # }
 
-    print("\n*** Pokémon Info ***\n")
+    print("\nRandom Pokémon Info : \n")
     # for key, value in basic_info.items():
     #     print(f"{key}: {value}")
 
@@ -40,9 +40,16 @@ def get_basic_pokemon_info(pokemon_id):
     #     i += 1
 
     if pokemon_id != "":
-        for key in data.keys():
-            if key == "name":
-                print(f"{key} - {data[key]}, {data['id']}")
+        print(f"ID : {data['id']}")
+        print(f"Name : {data['name']}")
+        print(f"Height : {data['height']} cm")
+        print(f"Weight : {data['weight']} kg")
+        print("Types : ")
+        for t in data["types"]:
+            print(f" - {t['type']['name']}")
+        print("Abilities : ")
+        for a in data["abilities"]:
+            print(f" - {a['ability']['name']}")
     else:
         i = 1
         for pokemon in data["results"]:
@@ -50,7 +57,7 @@ def get_basic_pokemon_info(pokemon_id):
             i += 1
 
 
-is_draw = input("Do you want to draw a Pokémon? (y/n): ").strip().lower()
+is_draw = 'y' # input("Do you want to draw a Pokémon? (y/n): ").strip().lower()
 
 if is_draw == "y":
     get_basic_pokemon_info(random_num)
