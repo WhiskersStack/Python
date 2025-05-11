@@ -2,6 +2,7 @@ import requests
 import json
 import metadata
 import random
+import os
 
 print("\n*** Welcome to the Pokémon API ***\n")
 
@@ -51,13 +52,20 @@ def get_basic_pokemon_info(pokemon_id):
         for a in data["abilities"]:
             print(f" - {a['ability']['name']}")
     else:
+        print("\nPokémon list will be saved in a file named 'pokemon_list.json' in the current directory.\n")
+        
+        pokemon_list = []
         i = 1
         for pokemon in data["results"]:
+            pokemon_list.append(pokemon['name'])
             print(f"{i}. {pokemon['name']}")
             i += 1
 
+        # Save the Pokémon list to a JSON file
+        with open("pokemon_list.json", "w") as f:
+            json.dump(pokemon_list, f, indent=4)
 
-is_draw = 'y' # input("Do you want to draw a Pokémon? (y/n): ").strip().lower()
+is_draw = 'n' # input("Do you want to draw a Pokémon? (y/n): ").strip().lower()
 
 if is_draw == "y":
     get_basic_pokemon_info(random_num)
