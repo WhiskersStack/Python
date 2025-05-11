@@ -11,7 +11,6 @@ print("\n*** Welcome to the Pokémon API ***")
 flag = True
 
 
-
 # Get the Pokémon list from the API
 def get_basic_pokemon_info(pokemon_id):
     url = (
@@ -103,5 +102,5 @@ while flag:
             print(".")
             time.sleep(1)
 
-        print("\nDone!")
+        print("\nDone!⚡")
         break  # End of the program

@@ -1,14 +1,43 @@
-{
-    "id": 723,
-    "name": "dartrix",
-    "height": 7,
-    "weight": 160,
-    "types": [
-        "grass",
-        "flying"
-    ],
-    "abilities": [
-        "overgrow",
-        "long-reach"
-    ]
-}
+[
+    {
+        "id": 723,
+        "name": "dartrix",
+        "height": 7,
+        "weight": 160,
+        "types": [
+            "grass",
+            "flying"
+        ],
+        "abilities": [
+            "overgrow",
+            "long-reach"
+        ]
+    },
+    {
+        "id": 724,
+        "name": "decidueye",
+        "height": 17,
+        "weight": 366,
+        "types": [
+            "grass",
+            "ghost"
+        ],
+        "abilities": [
+            "overgrow",
+            "long-reach"
+        ]
+    },
+    {
+        "id": 725,
+        "name": "litten",
+        "height": 4,
+        "weight": 95,
+        "types": [
+            "fire"
+        ],
+        "abilities": [
+            "blaze",
+            "intimidate"
+        ]
+    }
+]
