@@ -11,7 +11,6 @@ print("\n*** Welcome to the Pokémon API ***")
 flag = True
 
 
-
 # Get the Pokémon list from the API
 def get_basic_pokemon_info(pokemon_id):
     url = (
@@ -31,16 +30,22 @@ def get_basic_pokemon_info(pokemon_id):
 
     # If a Pokémon ID is provided, print its details
     if pokemon_id != "":
-        print(f"id : {data['id']}")
-        print(f"Name : {data['name']}")
-        print(f"Height : {data['height']} cm")
-        print(f"Weight : {data['weight']} kg")
-        print("Types : ")
-        for t in data["types"]:
-            print(f" - {t['type']['name']}")
-        print("Abilities : ")
-        for a in data["abilities"]:
-            print(f" - {a['ability']['name']}")
+        pokemon_info = {
+            "id": data["id"],
+            "name": data["name"],
+            "height": data["height"],
+            "weight": data["weight"],
+            "types": [t["type"]["name"] for t in data["types"]],
+            "abilities": [a["ability"]["name"] for a in data["abilities"]],
+        }
+
+        print(json.dumps(pokemon_info, indent=4))
+        
+        # Save the Pokémon info to a JSON file
+        with open(f"{data['name']}_info.json", "w") as f:
+            json.dump(pokemon_info, f, indent=4)
+
+        print(f"\nPokémon info saved to '{data['name']}_info.json'")
     # If no Pokémon ID is provided, print the list of Pokémon
     else:
         print(
