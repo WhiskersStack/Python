@@ -4,6 +4,7 @@ import metadata
 import random
 import os
 import time
+import my_pokemons
 
 
 print("\n*** Welcome to the Pokémon API ***")
@@ -63,34 +64,37 @@ def get_basic_pokemon_info(pokemon_id):
 
 # Interactive loop to ask the user if they want to draw a Pokémon or fetch the list, and continue or exit
 while flag:
-    random_num = str(
-        random.randint(1, 1000)
-    )  # Generate a random Pokémon ID between 1 and 1000
     is_draw = (
         input("\n> Do you want to draw a Pokémon? (y/n): ").strip().lower()
     )  # Ask the user if they want to draw a Pokémon
 
+
     # Check if the user input is valid
     if is_draw == "y":  # If the user wants to draw a Pokémon
+
         print("\n**************************")
         print("Drawing a Pokémon, please wait...")
         for i in range(3, 0, -1):
             print(".")
             time.sleep(1)
 
-        get_basic_pokemon_info(
-            random_num
-        )  # Call the function to get Pokémon info with the random ID
-    else:  # If the user doesn't want to draw a Pokémon
-        print("\n**************************")
-        print("Fetching Pokémon list, please wait...")
-        for i in range(3, 0, -1):
-            print(".")
-            time.sleep(1)
+        random_num = random.randint(1, 1000)  # Generate a random Pokémon ID between 1 and 1000
 
-        get_basic_pokemon_info(
-            ""
-        )  # Call the function to get Pokémon list with an empty ID
+        if_pokemon = my_pokemons.find_pokemon(random_num)  # Call the function to find a Pokémon with the random ID
+
+
+
+        if not if_pokemon:  # If the Pokémon is not found
+            print("\nYou don't have this Pokémon in your list.")
+            print(f"\nPokémon ID: {random_num}")
+            print("Fetching Pokémon info from the API...")
+            time.sleep(2)
+
+            get_basic_pokemon_info(random_num)  # Call the function to get Pokémon info with the random ID
+
+
+    else:  # If the user doesn't want to draw a Pokémon
+        print("\nOk goodbye!")
 
     # Ask the user if they want to continue or exit
     flag = input("\n> Do you want to continue? (y/n): ").strip().lower() == "y"
@@ -103,4 +107,5 @@ while flag:
             time.sleep(1)
 
         print("\nDone!⚡")
-        break  # End of the program
+        #break  # End of the program
+        flag = False
