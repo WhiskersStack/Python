@@ -8,7 +8,6 @@ print("\n*** Welcome to the Pokémon API ***\n")
 
 random_num = str(random.randint(1, 1000))
 
-
 def get_basic_pokemon_info(pokemon_id):
 
     url = metadata.BASE_URL + metadata.ENDPOINTS["pokemon"] + pokemon_id
@@ -20,26 +19,9 @@ def get_basic_pokemon_info(pokemon_id):
 
     data = response.json()
 
-    # basic_info = {
-    #     "id": data["id"],
-    #     "name": data["name"],
-    #     "base_experience": data["base_experience"],
-    #     "height": data["height"],
-    #     "weight": data["weight"],
-    #     "abilities": [a["ability"]["name"] for a in data["abilities"]],
-    # }
-
     print("\nRandom Pokémon Info : \n")
-    # for key, value in basic_info.items():
-    #     print(f"{key}: {value}")
 
-    # print(data['results'])
-
-    # i = 1
-    # for pokemon in data['results']:
-    #     print(f"{i}. {pokemon['name']}")
-    #     i += 1
-
+    i += 1
     if pokemon_id != "":
         print(f"ID : {data['id']}")
         print(f"Name : {data['name']}")
