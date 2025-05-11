@@ -26,17 +26,24 @@ def get_basic_pokemon_info(pokemon_id, my_pokemon_list):
     # Saving the response to a JSON file
     data = response.json()
 
-    print(f"ID : {data['id']}")
+    print(f"\nID : {data['id']}")
+    time.sleep(1)
     print(f"Name : {data['name']}")
+    time.sleep(1)
     print(f"Height : {data['height']} cm")
+    time.sleep(1)
     print(f"Weight : {data['weight']} kg")
+    time.sleep(1)
     print("Types : ")
+    time.sleep(1)
     for t in data["types"]:
         print(f" - {t['type']['name']}")
+    time.sleep(1)
     print("Abilities : ")
+    time.sleep(1)
     for a in data["abilities"]:
+        time.sleep(0.5)
         print(f" - {a['ability']['name']}")
-
 
     pokemon_info = {
         "id": data["id"],
@@ -49,6 +56,7 @@ def get_basic_pokemon_info(pokemon_id, my_pokemon_list):
 
     my_pokemon_list.append(pokemon_info)  # Add the Pokémon info to the list
 
+    time.sleep(1)
     # Save the Pokémon info to a JSON file
     with open("pokemon_list.json", "w") as f:
         json.dump(my_pokemon_list, f, indent=4)
@@ -67,18 +75,21 @@ while flag:
         print("\n**************************")
         print("Drawing a Pokémon, please wait...")
         for i in range(3, 0, -1):
-            print(".")
-            time.sleep(1)
+            print("✨")
+            time.sleep(2)
 
-        random_num = random.randint(1, 1000)  # Generate a random Pokémon ID between 1 and 1000
+        random_num = 698 #random.randint(1, 1000)  # Generate a random Pokémon ID between 1 and 1000
 
         pokemon_list = my_pokemons.find_pokemon(random_num)  # Call the function to find a Pokémon with the random ID
 
         if pokemon_list:  # If the Pokémon is not found
-            print("\nYou don't have this Pokémon in your list.")
+            print("\n**************************")
             print(f"\nPokémon ID: {random_num}")
-            print("Fetching Pokémon info from the API...")
-            time.sleep(2)
+            print("Fetching Pokémon info from the API...\n")
+
+            for i in range(3, 0, -1):
+                print("✨")
+                time.sleep(2)
 
             get_basic_pokemon_info(
                 str(random_num), pokemon_list
@@ -96,8 +107,8 @@ while flag:
         print("Goodbye, closing the program...")
 
         for i in range(3, 0, -1):
-            print(".")
-            time.sleep(1)
+            print("✨")
+            time.sleep(0.5)
 
         print("\nDone!⚡")
         # break  # End of the program
