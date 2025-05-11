@@ -39,5 +39,19 @@
             "blaze",
             "intimidate"
         ]
+    },
+    {
+        "id": 334,
+        "name": "altaria",
+        "height": 11,
+        "weight": 206,
+        "types": [
+            "dragon",
+            "flying"
+        ],
+        "abilities": [
+            "natural-cure",
+            "cloud-nine"
+        ]
     }
 ]
