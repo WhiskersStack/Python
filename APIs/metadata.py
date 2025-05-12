@@ -17,3 +17,5 @@ ENDPOINTS = {
     "version": "version/",
     "version_group": "version-group/",
 }
+
+POKEMON_COUNT = 1302 # Total number of Pokemon in the API

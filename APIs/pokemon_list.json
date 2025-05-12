@@ -14,212 +14,116 @@
         ]
     },
     {
-        "id": 724,
-        "name": "decidueye",
-        "height": 17,
-        "weight": 366,
+        "id": 609,
+        "name": "chandelure",
+        "height": 10,
+        "weight": 343,
         "types": [
-            "grass",
-            "ghost"
-        ],
-        "abilities": [
-            "overgrow",
-            "long-reach"
-        ]
-    },
-    {
-        "id": 725,
-        "name": "litten",
-        "height": 4,
-        "weight": 95,
-        "types": [
+            "ghost",
             "fire"
         ],
         "abilities": [
-            "blaze",
-            "intimidate"
+            "flash-fire",
+            "flame-body",
+            "infiltrator"
         ]
     },
     {
-        "id": 334,
-        "name": "altaria",
-        "height": 11,
-        "weight": 206,
+        "id": 13,
+        "name": "weedle",
+        "height": 3,
+        "weight": 32,
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "abilities": [
+            "shield-dust",
+            "run-away"
+        ]
+    },
+    {
+        "id": 600,
+        "name": "klang",
+        "height": 6,
+        "weight": 510,
+        "types": [
+            "steel"
+        ],
+        "abilities": [
+            "plus",
+            "minus",
+            "clear-body"
+        ]
+    },
+    {
+        "id": 149,
+        "name": "dragonite",
+        "height": 22,
+        "weight": 2100,
         "types": [
             "dragon",
             "flying"
         ],
         "abilities": [
-            "natural-cure",
-            "cloud-nine"
+            "inner-focus",
+            "multiscale"
         ]
     },
     {
-        "id": 222,
-        "name": "corsola",
-        "height": 6,
-        "weight": 50,
+        "id": 487,
+        "name": "giratina-altered",
+        "height": 45,
+        "weight": 7500,
         "types": [
-            "water",
-            "rock"
+            "ghost",
+            "dragon"
         ],
         "abilities": [
-            "hustle",
-            "natural-cure",
-            "regenerator"
+            "pressure",
+            "telepathy"
         ]
     },
     {
-        "id": 698,
-        "name": "amaura",
-        "height": 13,
-        "weight": 252,
+        "id": 142,
+        "name": "aerodactyl",
+        "height": 18,
+        "weight": 590,
         "types": [
             "rock",
-            "ice"
-        ],
-        "abilities": [
-            "refrigerate",
-            "snow-warning"
-        ]
-    },
-    {
-        "id": 964,
-        "name": "palafin-zero",
-        "height": 13,
-        "weight": 602,
-        "types": [
-            "water"
-        ],
-        "abilities": [
-            "zero-to-hero",
-            "zero-to-hero"
-        ]
-    },
-    {
-        "id": 822,
-        "name": "corvisquire",
-        "height": 8,
-        "weight": 160,
-        "types": [
             "flying"
         ],
         "abilities": [
-            "keen-eye",
-            "unnerve",
-            "big-pecks"
+            "rock-head",
+            "pressure",
+            "unnerve"
         ]
     },
     {
-        "id": 916,
-        "name": "oinkologne-male",
-        "height": 10,
-        "weight": 1200,
+        "id": 239,
+        "name": "elekid",
+        "height": 6,
+        "weight": 235,
         "types": [
-            "normal"
+            "electric"
         ],
         "abilities": [
-            "lingering-aroma",
-            "gluttony",
-            "thick-fat"
+            "static",
+            "vital-spirit"
         ]
     },
     {
-        "id": 535,
-        "name": "tympole",
-        "height": 5,
-        "weight": 45,
-        "types": [
-            "water"
-        ],
-        "abilities": [
-            "swift-swim",
-            "hydration",
-            "water-absorb"
-        ]
-    },
-    {
-        "id": 834,
-        "name": "drednaw",
-        "height": 10,
-        "weight": 1155,
+        "id": 788,
+        "name": "tapu-fini",
+        "height": 13,
+        "weight": 212,
         "types": [
             "water",
-            "rock"
+            "fairy"
         ],
         "abilities": [
-            "strong-jaw",
-            "shell-armor",
-            "swift-swim"
-        ]
-    },
-    {
-        "id": 606,
-        "name": "beheeyem",
-        "height": 10,
-        "weight": 345,
-        "types": [
-            "psychic"
-        ],
-        "abilities": [
-            "telepathy",
-            "synchronize",
-            "analytic"
-        ]
-    },
-    {
-        "id": 60,
-        "name": "poliwag",
-        "height": 6,
-        "weight": 124,
-        "types": [
-            "water"
-        ],
-        "abilities": [
-            "water-absorb",
-            "damp",
-            "swift-swim"
-        ]
-    },
-    {
-        "id": 793,
-        "name": "nihilego",
-        "height": 12,
-        "weight": 555,
-        "types": [
-            "rock",
-            "poison"
-        ],
-        "abilities": [
-            "beast-boost"
-        ]
-    },
-    {
-        "id": 574,
-        "name": "gothita",
-        "height": 4,
-        "weight": 58,
-        "types": [
-            "psychic"
-        ],
-        "abilities": [
-            "frisk",
-            "competitive",
-            "shadow-tag"
-        ]
-    },
-    {
-        "id": 115,
-        "name": "kangaskhan",
-        "height": 22,
-        "weight": 800,
-        "types": [
-            "normal"
-        ],
-        "abilities": [
-            "early-bird",
-            "scrappy",
-            "inner-focus"
+            "misty-surge",
+            "telepathy"
         ]
     }
 ]
